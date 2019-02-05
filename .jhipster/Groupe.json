@@ -1,0 +1,30 @@
+{
+    "name": "Groupe",
+    "fields": [
+        {
+            "fieldName": "groupName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "competition",
+            "otherEntityName": "competition",
+            "otherEntityField": "competitionName",
+            "otherEntityRelationshipName": "groupe"
+        }
+    ],
+    "changelogDate": "20190205182104",
+    "entityTableName": "groupe",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

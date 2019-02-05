@@ -1,0 +1,59 @@
+{
+    "name": "Confrontation",
+    "fields": [
+        {
+            "fieldName": "dataConfronto",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "scorePlayer1",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "scorePlayer2",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "penaltyPlayer1",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "penaltyPlayer2",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "player1",
+            "otherEntityName": "player",
+            "otherEntityField": "playerName",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "confrontation"
+        },
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "player2",
+            "otherEntityName": "player",
+            "otherEntityField": "playerName",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "confrontation"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "round",
+            "otherEntityName": "round",
+            "otherEntityField": "roundName",
+            "otherEntityRelationshipName": "confrontation"
+        }
+    ],
+    "changelogDate": "20190205182106",
+    "entityTableName": "confrontation",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

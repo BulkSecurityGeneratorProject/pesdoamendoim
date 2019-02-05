@@ -38,6 +38,11 @@ public class CacheConfiguration {
             cm.createCache(com.pesdoamendoim.competition.domain.User.class.getName(), jcacheConfiguration);
             cm.createCache(com.pesdoamendoim.competition.domain.Authority.class.getName(), jcacheConfiguration);
             cm.createCache(com.pesdoamendoim.competition.domain.User.class.getName() + ".authorities", jcacheConfiguration);
+            cm.createCache(com.pesdoamendoim.competition.domain.Competition.class.getName(), jcacheConfiguration);
+            cm.createCache(com.pesdoamendoim.competition.domain.Groupe.class.getName(), jcacheConfiguration);
+            cm.createCache(com.pesdoamendoim.competition.domain.Round.class.getName(), jcacheConfiguration);
+            cm.createCache(com.pesdoamendoim.competition.domain.Confrontation.class.getName(), jcacheConfiguration);
+            cm.createCache(com.pesdoamendoim.competition.domain.Player.class.getName(), jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }
