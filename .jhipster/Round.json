@@ -1,0 +1,30 @@
+{
+    "name": "Round",
+    "fields": [
+        {
+            "fieldName": "roundName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "groupe",
+            "otherEntityName": "groupe",
+            "otherEntityField": "groupName",
+            "otherEntityRelationshipName": "round"
+        }
+    ],
+    "changelogDate": "20190205182105",
+    "entityTableName": "round",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}
