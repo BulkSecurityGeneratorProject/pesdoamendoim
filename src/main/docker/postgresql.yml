@@ -1,0 +1,11 @@
+version: '2'
+services:
+    pesdoamendoim-postgresql:
+        image: postgres:10.4
+        # volumes:
+        #     - ~/volumes/jhipster/PESdoAmendoim/postgresql/:/var/lib/postgresql/data/
+        environment:
+            - POSTGRES_USER=PESdoAmendoim
+            - POSTGRES_PASSWORD=
+        ports:
+            - 5432:5432
