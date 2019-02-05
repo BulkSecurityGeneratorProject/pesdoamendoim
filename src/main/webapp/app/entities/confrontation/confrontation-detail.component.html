@@ -1,0 +1,61 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="confrontation">
+            <h2><span>Confrontation</span> {{confrontation.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Data Confronto</span></dt>
+                <dd>
+                    <span>{{confrontation.dataConfronto}}</span>
+                </dd>
+                <dt><span>Score Player 1</span></dt>
+                <dd>
+                    <span>{{confrontation.scorePlayer1}}</span>
+                </dd>
+                <dt><span>Score Player 2</span></dt>
+                <dd>
+                    <span>{{confrontation.scorePlayer2}}</span>
+                </dd>
+                <dt><span>Penalty Player 1</span></dt>
+                <dd>
+                    <span>{{confrontation.penaltyPlayer1}}</span>
+                </dd>
+                <dt><span>Penalty Player 2</span></dt>
+                <dd>
+                    <span>{{confrontation.penaltyPlayer2}}</span>
+                </dd>
+                <dt><span>Player 1</span></dt>
+                <dd>
+                    <div *ngIf="confrontation.player1Id">
+                        <a [routerLink]="['/player', confrontation.player1Id, 'view']">{{confrontation.player1PlayerName}}</a>
+                    </div>
+                </dd>
+                <dt><span>Player 2</span></dt>
+                <dd>
+                    <div *ngIf="confrontation.player2Id">
+                        <a [routerLink]="['/player', confrontation.player2Id, 'view']">{{confrontation.player2PlayerName}}</a>
+                    </div>
+                </dd>
+                <dt><span>Round</span></dt>
+                <dd>
+                    <div *ngIf="confrontation.roundId">
+                        <a [routerLink]="['/round', confrontation.roundId, 'view']">{{confrontation.roundRoundName}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/confrontation', confrontation.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

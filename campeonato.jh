@@ -1,0 +1,48 @@
+entity Competition {
+	competitionName String required
+}
+entity Groupe {
+	groupName String required
+}
+
+entity Round{
+	roundName String required
+}
+
+entity Confrontation {
+    dataConfronto Instant,
+    scorePlayer1 Integer,
+    scorePlayer2 Integer,
+    penaltyPlayer1 Integer,
+    penaltyPlayer2 Integer
+}
+
+entity Player {
+	playerName String required
+}
+
+relationship ManyToOne {
+	Groupe{competition(competitionName)} to Competition,
+    Round{groupe(groupName)} to Groupe,
+    Confrontation{round(roundName)} to Round
+}
+
+relationship OneToOne {
+	Confrontation{player1(playerName)} to Player,
+    Confrontation{player2(playerName)} to Player
+}
+
+// Set pagination options
+paginate Round with pagination
+
+// Use Data Transfert Objects (DTO)
+dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl
+
+// Set service options to all except few
+// service all with serviceImpl except Employee, Job
+
+// Set an angular suffix
+// angularSuffix * with mySuffix
