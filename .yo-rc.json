@@ -32,7 +32,7 @@
         "entitySuffix": "",
         "dtoSuffix": "DTO",
         "otherModules": [],
-        "herokuAppName": "pe-sdo-amendoim",
+        "herokuAppName": "pesdoamendoim",
         "herokuDeployType": "git"
     },
     "git-provider": "GitHub",
