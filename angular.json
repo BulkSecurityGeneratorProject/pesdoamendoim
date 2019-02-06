@@ -10,7 +10,7 @@
             "architect": {}
         }
     },
-    "defaultProject": "pe-sdo-amendoim",
+    "defaultProject": "pesdoamendoim",
     "cli": {
         "packageManager": "npm"
     },

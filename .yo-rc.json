@@ -2,7 +2,7 @@
     "generator-jhipster": {
         "applicationType": "monolith",
         "gitCompany": "",
-        "baseName": "PESdoAmendoim",
+        "baseName": "pesdoamendoim",
         "packageName": "com.pesdoamendoim.competition",
         "packageFolder": "com/pesdoamendoim/competition",
         "serverPort": 8080,
