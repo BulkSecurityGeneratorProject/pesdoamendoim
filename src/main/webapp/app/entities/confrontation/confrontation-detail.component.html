@@ -5,9 +5,19 @@
             <hr>
             <jhi-alert-error></jhi-alert-error>
             <dl class="row-md jh-entity-details">
-                <dt><span>Data Confronto</span></dt>
+                <dt><span>Data</span></dt>
                 <dd>
                     <span>{{confrontation.dataConfronto}}</span>
+                </dd>
+                <dt><span>Penalty Player 1</span></dt>
+                <dd>
+                    <span>{{confrontation.penaltyPlayer1}}</span>
+                </dd>
+                <dt><span>Player 1</span></dt>
+                <dd>
+                    <div *ngIf="confrontation.player1Id">
+                        <a [routerLink]="['/player', confrontation.player1Id, 'view']">{{confrontation.player1PlayerName}}</a>
+                    </div>
                 </dd>
                 <dt><span>Score Player 1</span></dt>
                 <dd>
@@ -17,20 +27,11 @@
                 <dd>
                     <span>{{confrontation.scorePlayer2}}</span>
                 </dd>
-                <dt><span>Penalty Player 1</span></dt>
-                <dd>
-                    <span>{{confrontation.penaltyPlayer1}}</span>
-                </dd>
                 <dt><span>Penalty Player 2</span></dt>
                 <dd>
                     <span>{{confrontation.penaltyPlayer2}}</span>
                 </dd>
-                <dt><span>Player 1</span></dt>
-                <dd>
-                    <div *ngIf="confrontation.player1Id">
-                        <a [routerLink]="['/player', confrontation.player1Id, 'view']">{{confrontation.player1PlayerName}}</a>
-                    </div>
-                </dd>
+               
                 <dt><span>Player 2</span></dt>
                 <dd>
                     <div *ngIf="confrontation.player2Id">
